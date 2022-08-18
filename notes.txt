@@ -1,0 +1,62 @@
+REST API
+
+URI - Uniform Resource Identifier
+
+https://facebook.com/posts/1
+
+GET - /posts (Gets all the posts)
+POST - /posts (Adds a post to posts)
+GET - /posts/id (Gets a single post based on the id)
+PUT - /posts/id (Updates a single post based on the id)
+DELETE - /posts/id (Deletes a single post based on the id)
+
+// install multiple packages
+npm i express mongoose jsonwebtoken bcryptjs
+express - for the backend server
+mongoose - connect to the mongoDB
+jsonwebtoken - to use tokens (such as for sessions)
+bcryptjs - decrypt / encrypt
+
+// for tokens
+jwt.io
+
+inside express, method .Router(), route to server.js
+
+// to login
+x-auth-token
+- Stores req.user data such as name, username, password, etc. (Check the user Schema)
+
+Assignment Due on Monday(1 August 2022)
+- Create a comments endpoint where users can
+    - ADD comments
+    - EDIT comments
+    - DELETE comments
+
+ADD
+    - Only Add comment if logged in
+
+EDIT
+    - Only Edit OWN comment
+
+DELETE
+    - Only Delete OWN comment
+
+LIKES
+    - Add userId inside the likes array if id not in Array, remove if in Array
+
+    useState, a function that detects changes to the variable/value and re-render the element containing the useState
+    useEffect, a function that detects changes and FETCHES data
+
+    what is mongodb aggregates
+
+subdocuments - remove / pull
+Cart.items.pull(id)
+Cart.items.update({id}, {$pull: {items: {_id:1}}})
+
+npm i jwt-decode
+- to decode token
+
+mongo importing to mongodb cloud
+mongoimport --host ac-wtgkmrf-shard-00-01.ofi9vbd.mongodb.net:27017 --db Blog --collection Posts --type json --file posts.json --authenticationDatabase admin --ssl --username quanshenjoelmichael21s --password joelmichael94
+
+mongoimport --uri "mongodb+srv://quanshenjoelmichael21s:joelmichael94@jms-fs.ofi9vbd.mongodb.net/Blog?retryWrites=true&w=majority" --collection users --type json --file users.json
