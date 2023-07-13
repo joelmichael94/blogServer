@@ -56,7 +56,27 @@ Cart.items.update({id}, {$pull: {items: {_id:1}}})
 npm i jwt-decode
 - to decode token
 
+if using css in React
+- external (import css, consider using separate css for different components)
+    - import the file and use inline as a className
+- internal / inline (styles = {}, then call the styles variable in the inline)
+
+
+
+
 mongo importing to mongodb cloud
 mongoimport --host ac-wtgkmrf-shard-00-01.ofi9vbd.mongodb.net:27017 --db Blog --collection Posts --type json --file posts.json --authenticationDatabase admin --ssl --username quanshenjoelmichael21s --password joelmichael94
 
 mongoimport --uri "mongodb+srv://quanshenjoelmichael21s:joelmichael94@jms-fs.ofi9vbd.mongodb.net/Blog?retryWrites=true&w=majority" --collection users --type json --file users.json
+
+hosting frontend client on vercel
+create .env file
+add REACT_APP_API_URL and link (From Vercel Server)
+change all localhost fetch links to fetch(`${process.env.REACT_APP_API_URL}posts/`);
+change the mongoose.connect in server folder
+add to new github repo (separate from server repo)
+import to vercel, add environment variables (REACT_APP_API_URL + url)
+
+
+useRef("value")
+- an object containing {current : "value"}
